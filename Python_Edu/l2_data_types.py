@@ -75,18 +75,52 @@ def casting_works():
 def casting_fails():
     print(int(4j+4), float(4j+4))
 
+"""
 
+Das math-Modul bietet einige erweiterte mathematische Methoden und mathematische Konstanten:
+
+Konstanten:
+
+    * math.pi       Kreiszahl Pi        float
+    * math.tau      Tau (2 * Pi)        float
+    * math.e        Euler'sche Zahl     float
+    * math.inf      Positiv Unendlich   float
+    * math.nan      "Not A Number"      float
+    
+Nützliche math-Methoden:
+
+    * math.pow(zahl1, zahl2)    gibt zahl1 potenziert mit zahl2 zurück.
+    * math.sqrt(zahl)           gibt die Quadratwurzel aus "zahl" zurück.
+    * math.fsum(collection)     gibt die Summe aller Zahlen einer Collection zurück.
+    * math.gcd(zahl1, zahl2)    gibt den kleinsten gemeinsamen Nenner zweier Ganzzahlen zurück.
+    
+"""
+def more_math():
+    import math
+
+    PI = math.pi
+    E = math.e
+    constants = (PI, E)
+    numbers = (9,180)
+
+    print(f"{PI} hoch {E} ist:\n{math.pow(PI,E)}")
+    print(f"Die Quadratwurzel aus {numbers[0]} ist:\n{math.sqrt(numbers[0])}")
+    print(f"Alle Zahlen in {constants} aufsummiert ist:\n{math.fsum(constants)}")
+    print(f"Der kleinste gemeinsame Nenner von {numbers[0]} und {numbers[1]} ist:\n{math.gcd(numbers[0],numbers[1])}")
 
 ## Strings ##
 """
 
 Merkmale:
 
-    * Strings werden durch "" oder '' markiert (jedoch nicht gemischt - "string' wird nicht erkannt).
-    * Strings in Python sind implizit Abfolgen einzelner Zeichen, die jedoch ebenfalls als String gespeichert sind.
+    * Strings werden durch "" oder '' markiert 
+        (jedoch nicht gemischt - "string' wird nicht erkannt).
+    * Strings in Python sind implizit Abfolgen einzelner Zeichen, 
+        die jedoch ebenfalls als String gespeichert sind.
     * Verbatim Strings können durch dreifache doppelte Anführungszeichen markiert werden. 
     * Verkettung zwischen Strings erfolgt durch den '+'-Operator.
-    * Strings können entweder durch die "format()"-Methode oder durch f-String formatiert werden.
+    * Strings können entweder durch die "format()"-Methode oder 
+        durch f-String formatiert werden.
 
 """
 def vertical_string(string: str = "What is the airspeed velocity of an unladen 'swallow'?"):
@@ -160,6 +194,11 @@ def formatted_string():
 
     print(format_a + " " + format_b + " " + format_c)
 
+def formatted_number_string(zahl):
+    with_decimals = f"{zahl:.2f}"
+    as_percentage = f"{zahl:.0%}"
+    print(zahl, with_decimals, as_percentage)
+
 """
 
 Nützliche String-Methoden:
@@ -184,7 +223,7 @@ Nützliche String-Methoden:
         ersetzt vorkommende "NA"-Substrings mit "P".
     
     book_info = "1984, George Orwell, Dystopie".split(",")
-        Gibt eine durch "," gekennzeichnete Liste an Substrings zurück.
+        Gibt eine am ","-Zeichen separierte Liste an Substrings zurück.
         (also: ["1984", " George Orwell", " Dystopie"])
     
     clear_string = " Hallo Welt ".strip()
@@ -224,7 +263,7 @@ Escape-Sequenzen möglich:
     * \t    Tabulator
     * \b    Backspace                       Beispiel: "A\bBCD" -> "BCD"
     * \f    "Form Feed", nächste Seite      obsolet!
-    * \000  Oktalwert                       000 steht hier für Ziffern von 0-7
+    * \000  Oktalwert                       0 steht hier für Ziffern von 0-7
     * \x00  Hexadezimalwert                 x gefolgt von zwei Hexadezimalziffer 0-F
 
 """

@@ -25,7 +25,7 @@ def what():
                         'einem Kofferwort',
                         'der britischen Komikergruppe "Monty Python"',
                         'das Inselvolk der Pythonier']
-    namensUrsprung = moeglicheAntworten #[]  
+    namensUrsprung = moeglicheAntworten[2]  
     print(f"Python ist benannt nach {namensUrsprung}!")
 
 
@@ -63,6 +63,7 @@ Hier eine kleine Auswahl der populärsten Möglichkeiten:
     * PyCharm
     * Sublime
     * Eclipse mit PyDev
+    * Anaconda
 
 """
 def how():

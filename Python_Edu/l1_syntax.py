@@ -1,5 +1,3 @@
-import typing
-
 ### Python Syntax ###
 def do_nothing(): 
     pass
@@ -35,7 +33,7 @@ def indents():
 
 Anders als beispielsweise C# ist Python (so wie JavaScript) schwach typisiert. 
 Das Konzept der Deklarierung und der Initialisierung ist Python also fremd. 
-Variablen werden stattdessen durch das bloße zuweisen eines Wertes erschaffen.
+Variablen werden stattdessen durch das bloße Zuweisen eines Wertes definiert.
 
 """
 def variables(n = 42):
@@ -43,7 +41,6 @@ def variables(n = 42):
     c = 3.14159
     e = False
     return [n,i,c,e]
-
 
 
 ## Type Hints ##
@@ -55,7 +52,7 @@ komplexeren Programmen. Type Hints sind in jedem Fall optional, können aber abh
 von der gewählten Entwicklungsumgebung das Coden vereinfachen.
 
 """
-def type_hints(n: int = 42) -> list[typing.Any]:
+def type_hints(n: int = 42) -> list:
     i: str = "Hamstervater"
     c: float = 3.14159
     e: bool = False
@@ -69,7 +66,7 @@ def type_hints(n: int = 42) -> list[typing.Any]:
 Casting und Typinformationen abrufen sind in Python der jeweiligen Datentypklasse implizite 
 Funktionen. 
 
-Zum Casten wird also der Name des Zieldatentyps verwendet werden, als Argument der zu
+Zum Casten wird also der Name des Zieldatentyps verwendet, als Argument der zu
 castende Wert (oder Variable) angegeben, und zurückgegeben wird das Argument im neuem
 Zieldatentyp.
 
